@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Raynna's Bucketlist | Tokyo 🏯</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://64.media.tumblr.com/tumblr_lkqypfp4j51qi6qow.gif"
+    />
+    <style>
+      body {
+        background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+      }
+
+      h1 {
+        text-align: center;
+        margin: 0 auto;
+        background: radial-gradient(
+          328px at 2.9% 15%,
+          rgb(191, 224, 251) 0%,
+          rgb(232, 233, 251) 25.8%,
+          rgb(252, 239, 250) 50.8%,
+          rgb(234, 251, 251) 77.6%,
+          rgb(214, 247, 226) 100.7%
+        );
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 70%;
+        transition: all 150ms ease-in-out;
+      }
+
+      h1:hover {
+        transform: scale(1.1);
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(208, 228, 235);
+        background: white;
+        font-size: 25px;
+        border-radius: 10px;
+        padding: 15px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background: rgb(208, 228, 235);
+        cursor: pointer;
+      }
+
+      .travel-button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid rgb(208, 228, 235);
+        background: white;
+        font-size: 25px;
+        border-radius: 10px;
+        padding: 15px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .travel-button:hover {
+        background: rgb(208, 228, 235);
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .dark-theme-button {
+        font-size: 10px;
+        color: white;
+        background: black;
+        padding: 2 4px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .dark-theme-button:hover {
+        border: 1px solid black;
+        border-radius: 10px;
+        color: black;
+        background: white;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 15px;
+      }
+
+      .tokyo-intro-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      .tokyo-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+
+      .tokyo-grid-picture-1 {
+        transition: all 150ms ease-in-out;
+      }
+
+      .tokyo-grid-picture-1:hover {
+        filter: contrast(80%);
+        transform: scale(1.1) rotate(-10deg);
+      }
+
+      .tokyo-grid-picture-2 {
+        transition: all 150ms ease-in-out;
+      }
+
+      .tokyo-grid-picture-2:hover {
+        filter: contrast(80%);
+        transform: scale(1.1) rotate(-20deg);
+      }
+
+      .tokyo-grid-picture-3 {
+        transition: all 150ms ease-in-out;
+      }
+
+      .tokyo-grid-picture-3:hover {
+        filter: contrast(80%);
+        transform: scale(1.1) rotate(10deg);
+      }
+
+      .tokyo-grid-picture-4 {
+        transition: all 150ms ease-in-out;
+      }
+
+      .tokyo-grid-picture-4:hover {
+        filter: contrast(80%);
+        transform: scale(1.1) rotate(20deg);
+      }
+
+      .grid {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .dark-theme {
+        background: linear-gradient(
+          109.6deg,
+          rgb(0, 0, 0) 11.2%,
+          rgb(11, 132, 145) 91.1%
+        );
+        color: white;
+      }
+
+      .dark-theme .container {
+        background: rgb(255, 255, 255, 0.1);
+      }
+
+      .dark-theme h1 {
+        text-align: center;
+        margin: 0 auto;
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 70%;
+      }
+      .dark-theme a {
+        color: plum;
+      }
+
+      .dark-theme button {
+        border: 1px solid white;
+        background: white;
+        color: black;
+        transition: all 150ms ease-in-out;
+      }
+
+      .dark-theme button:hover {
+        color: white;
+        background: black;
+        border: 1px solid white;
+      }
+
+      .dark-theme .travel-button {
+        border: 1px solid white;
+        background: white;
+        color: black;
+        transition: all 150ms ease-in-out;
+      }
+
+      .dark-theme .travel-button:hover {
+        color: white;
+        background: black;
+        border: 1px solid white;
+      }
+
+      .raynna {
+        background: rgb(247, 172, 209);
+        padding: 5px;
+        font-style: italic;
+      }
+
+      .dark-theme .raynna {
+        background: rgb(124, 45, 84);
+        padding: 5px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Japan, Tokyo</h1>
+      <h2>#1 on Raynna's Bucket List</h2>
+      <a href="https://en.wikipedia.org/wiki/Tokyo">
+        <img
+          src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="tokyo-intro-picture"
+        />
+      </a>
+
+      <div class="grid">
+        <img
+          src="https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="tokyo-grid-picture-1"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="tokyo-grid-picture-2"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1480796927426-f609979314bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="tokyo-grid-picture-3"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1194&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="tokyo-grid-picture-4"
+        />
+      </div>
+      <p>
+        Tokyo (東京, Tōkyō), officially the Tokyo Metropolis (東京都, Tōkyō-to),
+        is the capital of Japan and the most populous city in the world with a
+        population of over 14 million residents as of 2023. The Tokyo
+        metropolitan area, which includes Tokyo and nearby prefectures, is the
+        world's most-populous metropolitan area with 40.8 million residents as
+        of 2023.
+
+        <br /><br />Located at the head of Tokyo Bay, Tokyo is part of the Kantō
+        region on the central coast of Honshu, Japan's largest island. Tokyo
+        serves as Japan's economic center and the seat of both the Japanese
+        government and the Emperor of Japan.
+      </p>
+      <button class="travel-button">Travel with Me!</button>
+    </div>
+
+    <footer>
+      Coded with 💗 by
+      <strong><span class="raynna">Raynna Etienne</span></strong> for
+      <a href="https://www.shecodes.io/">SheCodes.io </a></footer
+    >
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark-theme")) {
+          body.classList.remove("dark-theme");
+        } else {
+          body.classList.add("dark-theme");
+        }
+      }
+
+      let themeDarkButton = document.querySelector(".dark-theme-button");
+      themeDarkButton.addEventListener("click", changeTheme);
+
+      function travelWithButton() {
+        let name = prompt("What is your name?");
+
+        if (name.length <= 0) {
+          alert("Oh my gosh! We kinda need a name to address you by! 💔");
+        } else {
+          let email = prompt(
+            "Thank you, " + name + "! And what is your email?"
+          );
+        }
+
+        if (name.length > 0) {
+          alert(
+            "Amazing! 🧘🏽‍♀️ We appreciate you reaching out. You should receive a confirmation receipt in your email shortly. Happy travels! 💟"
+          );
+        } else {
+          alert("Maybe refresh and try again, you got this.");
+        }
+      }
+
+      let buttonTravel = document.querySelector(".travel-button");
+      buttonTravel.addEventListener("click", travelWithButton);
+    </script>
+  </body>
+</html>
